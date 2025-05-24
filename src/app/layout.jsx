@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import style from "./page.module.css";
 import { Nav } from "./components/Nav/Nav";
+import { Breandcrumb } from "./components/Breadcrumb/Breadcrumb";
 
 const Jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700"],
@@ -18,9 +19,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body className={`${Jakarta.className} ${style.body}`}>
+      <body
+        className={`${Jakarta.className} ${style.body}`}
+        suppressHydrationWarning={true}
+      >
         <Nav />
-        <main>{children}</main>
+        <main className={style.main}>
+          <Breandcrumb />
+          {children}
+        </main>
       </body>
     </html>
   );

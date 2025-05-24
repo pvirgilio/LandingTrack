@@ -4,7 +4,7 @@ import { RiHomeFill } from "react-icons/ri";
 
 export const Menu = () => {
   const menuItems = [
-    { icon: <RiHomeFill color="#2954E2" />, name: "Dashboard", href: "#" },
+    { icon: "", name: "Dashboard", href: "#" },
     { name: "Clientes", href: "#" },
     { name: "Configurações", href: "#" },
     { name: "Ajuda", href: "#" },
